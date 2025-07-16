@@ -1,6 +1,18 @@
-function initializeMap() {
-  const map = new google.maps.Map(document.getElementById('map'), {
+let map = null;
+
+async function initializeMap() {
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+  map = new Map(document.getElementById('map'), {
     center: { lat: 44.454778, lng: -73.227556 },
     zoom: 18,
+    mapId: "46571f95beb50f37f04802da"
   });
+
+  const marker = new AdvancedMarkerElement({
+    map: map,
+    position: { lat: 44.454778, lng: -73.227556 },
+    title: "Test Marker"
+  })
 }
