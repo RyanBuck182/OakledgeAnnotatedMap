@@ -11,9 +11,26 @@ async function initializeMap() {
     mapId: "46571f95beb50f37f04802da"
   });
 
+  createMarker({
+    title: "Test Marker",
+    position: { lat: 44.454778, lng: -73.227556 }
+  });
+}
+
+/**
+ * Create a map marker.
+ * @param {{
+ * title: String,
+ * position: { lat: Number, lng: Number },
+ * }} p The parameters.
+ * @returns {AdvancedMarkerElement} The marker element.
+ */
+function createMarker(p) {
   const marker = new AdvancedMarkerElement({
     map: map,
-    position: { lat: 44.454778, lng: -73.227556 },
-    title: "Test Marker"
-  })
+    position: p.position,
+    title: p.title
+  });
+
+  return marker;
 }
