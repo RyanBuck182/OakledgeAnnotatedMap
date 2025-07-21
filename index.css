@@ -3,6 +3,7 @@
   width: 100%;
 }
 
+/* Gets rid of a weird gap with the info windows. */
 .gm-style-iw-chr {
   height: 0;
 }
