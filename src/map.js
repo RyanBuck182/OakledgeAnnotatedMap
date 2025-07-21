@@ -37,6 +37,20 @@ function createMarker(p) {
     title: p.title,
   });
 
+  createInfoWindow(marker, p);
+
+  return marker;
+}
+
+/**
+ * Create an info window for a map marker.
+ * @param {AdvancedMarkerElement} marker The map marker.
+ * @param {{
+ * title: String,
+ * description: String,
+ * }} p The parameters.
+ */
+function createInfoWindow(marker, p) {
   const infoWindow = new google.maps.InfoWindow({
     content: `
       <div style="max-width: 300px;">
@@ -57,12 +71,8 @@ function createMarker(p) {
   infoWindow.addListener('domready', () => {
     const see_more = document.getElementById("see-more");
     see_more.addEventListener('click', () => showMarkerModal(p));
-  })
-
-  return marker;
+  });
 }
-
-
 
 /**
  * Create a modal for a map marker.
