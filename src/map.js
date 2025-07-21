@@ -40,7 +40,7 @@ function createMarker(p) {
   const infoWindow = new google.maps.InfoWindow({
     content: `
       <div style="max-width: 300px;">
-        <h1 id="firstHeading" class="firstHeading">${p.title}</h1>
+        <h2>${p.title}</h2>
         <p>${p.description}</p>
       </div>
     `,
