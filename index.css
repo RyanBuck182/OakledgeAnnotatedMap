@@ -7,6 +7,11 @@ body {
   margin: 0;
 }
 
+h1 {
+  margin-top: 0;
+  margin-bottom: 1vh;
+}
+
 #map {
   height: 100vh;
   width: 100%;
