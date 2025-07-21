@@ -1,8 +1,3 @@
-#map {
-  height: 100vh;
-  width: 100%;
-}
-
 /* Gets rid of a weird gap with the info windows. */
 .gm-style-iw-chr {
   height: 0;
@@ -10,6 +5,11 @@
 
 body {
   margin: 0;
+}
+
+#map {
+  height: 100vh;
+  width: 100%;
 }
 
 #modal {
