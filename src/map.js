@@ -42,6 +42,7 @@ function createMarker(p) {
       <div style="max-width: 300px;">
         <h2>${p.title}</h2>
         <p>${p.description}</p>
+        <p id="see-more">See more...</p>
       </div>
     `,
   });
@@ -53,5 +54,37 @@ function createMarker(p) {
     });
   });
 
+  infoWindow.addListener('domready', () => {
+    const see_more = document.getElementById("see-more");
+    see_more.addEventListener('click', () => showMarkerModal(p));
+  })
+
   return marker;
+}
+
+
+
+/**
+ * Create a modal for a map marker.
+ * @param {{
+ * title: String,
+ * description: String,
+ * }} p The parameters.
+ */
+function showMarkerModal(p) {
+  const modal = document.getElementById("modal");
+  const modal_close = document.getElementById("modal-close");
+  const modal_title = document.getElementById("modal-title");
+  const modal_description = document.getElementById("modal-description");
+
+  modal_title.innerText = p.title;
+  modal_description.innerText = p.description;
+
+  modal_close.onclick = () => modal.classList.remove("show");
+  window.onclick = (event) => {
+    if (event.target == modal)
+      modal.classList.remove("show");
+  };
+
+  modal.classList.add("show");
 }
