@@ -14,10 +14,10 @@ async function initializeMap() {
   createMarker({
     title: "Test Marker",
     position: { lat: 44.454778, lng: -73.227556 },
-    description: `This is a test decription. Lorem ipsum dolor sit amet
-    consectetur adipisicing elit. Rerum incidunt ex illo reiciendis cupiditate
-    consectetur, aliquid quis, delectus sed quasi ut neque natus aspernatur ab
-    placeat minus nesciunt obcaecati eum.`,
+    description: 'This is a test decription. Lorem ipsum dolor sit amet'
+    + ' consectetur adipisicing elit. Rerum incidunt ex illo reiciendis cupiditate'
+    + ' consectetur, aliquid quis, delectus sed quasi ut neque natus aspernatur ab'
+    + ' placeat minus nesciunt obcaecati eum.',
   });
 }
 
