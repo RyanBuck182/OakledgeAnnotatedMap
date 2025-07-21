@@ -45,7 +45,8 @@ h1 {
 #modal-close {
   cursor: pointer;
   float: right;
-  font-size: 20px;
+  margin-top: 0;
+  font-size: 32px;
   font-weight: bold;
 }
 
