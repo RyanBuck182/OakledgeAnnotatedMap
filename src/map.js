@@ -118,36 +118,34 @@ function showMarkerModal(p) {
   modal_description.innerText = p.description;
 
   if (p.images && p.images.length > 0) {
-    let currentImageIndex = 0;
+    const img_count = p.images.length;
+    let img_index = 0;
     
     modal_images.innerHTML = `
-      <div class="image-container">
+      <div id="modal-image-container">
         <img id="modal-image" src="${p.images[0]}" alt="${p.title}">
-        ${p.images.length > 1 ? `
-          <button id="prev-btn" class="nav-btn prev">&lt;</button>
-          <button id="next-btn" class="nav-btn next">&gt;</button>
-          <div class="image-counter">${currentImageIndex + 1} / ${p.images.length}</div>
+        ${img_count > 1 ? `
+          <button id="modal-image-prev-btn" class="modal-image-nav-btn">&lt;</button>
+          <button id="modal-image-next-btn" class="modal-image-nav-btn">&gt;</button>
+          <div id="modal-image-counter">${img_index + 1} / ${img_count}</div>
         ` : ''}
       </div>
     `;
 
-    if (p.images.length > 1) {
-      const prevBtn = document.getElementById("prev-btn");
-      const nextBtn = document.getElementById("next-btn");
-      const modalImage = document.getElementById("modal-image");
-      const counter = document.querySelector(".image-counter");
+    if (img_count > 1) {
+      const modal_image = document.getElementById("modal-image");
+      const prev_btn = document.getElementById("modal-image-prev-btn");
+      const next_btn = document.getElementById("modal-image-next-btn");
+      const img_counter = document.getElementById("modal-image-counter");
 
-      prevBtn.onclick = () => {
-        currentImageIndex = (currentImageIndex - 1 + p.images.length) % p.images.length;
-        modalImage.src = p.images[currentImageIndex];
-        counter.innerText = `${currentImageIndex + 1} / ${p.images.length}`;
-      };
+      const update_img_index = (change_amt) => {
+        img_index = (img_index + change_amt + img_count) % img_count;
+        modal_image.src = p.images[img_index];
+        img_counter.innerText = `${img_index + 1} / ${img_count}`;
+      }
 
-      nextBtn.onclick = () => {
-        currentImageIndex = (currentImageIndex + 1) % p.images.length;
-        modalImage.src = p.images[currentImageIndex];
-        counter.innerText = `${currentImageIndex + 1} / ${p.images.length}`;
-      };
+      prev_btn.onclick = () => update_img_index(-1);
+      next_btn.onclick = () => update_img_index(+1);
     }
   } else {
     modal_images.innerHTML = '';

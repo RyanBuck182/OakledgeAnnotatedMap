@@ -64,7 +64,7 @@ h1 {
   text-decoration: underline;
 }
 
-.image-container {
+#modal-image-container {
   position: relative;
   margin: 15px 0;
   background: black;
@@ -72,7 +72,7 @@ h1 {
   overflow: hidden;
 }
 
-.nav-btn {
+.modal-image-nav-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -85,17 +85,18 @@ h1 {
   border-radius: 4px;
 }
 
-.nav-btn.prev {
-  left: 10px;
-}
-.nav-btn.next {
-  right: 10px;
-}
-.nav-btn:hover {
+.modal-image-nav-btn:hover {
   background: rgba(0, 0, 0, 0.9);
 }
 
-.image-counter {
+#modal-image-prev-btn {
+  left: 10px;
+}
+#modal-image-next-btn {
+  right: 10px;
+}
+
+#modal-image-counter {
   position: absolute;
   bottom: 10px;
   right: 10px;
