@@ -105,6 +105,7 @@ function createInfoWindow(marker, p) {
  * @param {{
  * title: String,
  * description: String,
+ * images: String?[]
  * }} p The parameters.
  */
 function showMarkerModal(p) {
@@ -112,10 +113,31 @@ function showMarkerModal(p) {
   const modal_close = document.getElementById("modal-close");
   const modal_title = document.getElementById("modal-title");
   const modal_description = document.getElementById("modal-description");
-  const modal_images = document.getElementById("modal-images");
 
   modal_title.innerText = p.title;
   modal_description.innerText = p.description;
+
+  showModalImages(p);
+
+  modal_close.onclick = () => modal.classList.remove("show");
+  window.onclick = (event) => {
+    if (event.target == modal)
+      modal.classList.remove("show");
+  };
+
+  modal.classList.add("show");
+}
+
+/**
+ * Show the images on a modal.
+ * @param {{
+ * title: String,
+ * description: String,
+ * images: String?[]
+ * }} p The parameters.
+ */
+function showModalImages(p) {
+  const modal_images = document.getElementById("modal-images");
 
   if (p.images && p.images.length > 0) {
     const img_count = p.images.length;
@@ -138,24 +160,16 @@ function showMarkerModal(p) {
       const next_btn = document.getElementById("modal-image-next-btn");
       const img_counter = document.getElementById("modal-image-counter");
 
-      const update_img_index = (change_amt) => {
-        img_index = (img_index + change_amt + img_count) % img_count;
+      const change_img_index = (amt) => {
+        img_index = (img_index + amt + img_count) % img_count;
         modal_image.src = p.images[img_index];
         img_counter.innerText = `${img_index + 1} / ${img_count}`;
       }
 
-      prev_btn.onclick = () => update_img_index(-1);
-      next_btn.onclick = () => update_img_index(+1);
+      prev_btn.onclick = () => change_img_index(-1);
+      next_btn.onclick = () => change_img_index(+1);
     }
   } else {
     modal_images.innerHTML = '';
   }
-
-  modal_close.onclick = () => modal.classList.remove("show");
-  window.onclick = (event) => {
-    if (event.target == modal)
-      modal.classList.remove("show");
-  };
-
-  modal.classList.add("show");
 }
