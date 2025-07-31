@@ -123,11 +123,19 @@ function createMarker(p) {
  * }} p The parameters.
  */
 function createInfoWindow(marker, p) {
+  const max_desc_length = 150;
+
+  let display_description = p.description;
+  if (display_description.length > max_desc_length) {
+    display_description = display_description.slice(0, max_desc_length - 3);
+    display_description += "..."
+  }
+
   marker.addListener("click", () => {
     infoWindow.setContent(`
       <div style="max-width: 300px;">
         <h2>${p.title}</h2>
-        <p>${p.description}</p>
+        <p>${display_description}</p>
         <p id="see-more">See more...</p>
       </div>
     `);
