@@ -64,6 +64,7 @@ async function initializeMap() {
  * position: { lat: Number, lng: Number },
  * description: String,
  * images: String?[],
+ * audio: String?[],
  * category: Category?,
  * sources: Source?[],
  * }} p The parameters.
@@ -91,6 +92,7 @@ function createMarker(p) {
  * title: String,
  * description: String,
  * images: String?[],
+ * audio: String?[],
  * sources: Source?[],
  * }} p The parameters.
  */
@@ -130,6 +132,7 @@ function createInfoWindow(marker, p) {
  * title: String,
  * description: String,
  * images: String?[]
+ * audio: String?[],
  * sources: Source?[],
  * }} p The parameters.
  */
@@ -149,14 +152,31 @@ function showMarkerModal(p) {
       sources_html += `<a class="source" href="${source.link}">${source.name}</a>`
     });
     modal_sources.innerHTML = sources_html;
+  } else {
+    modal_sources.innerHTML = "";
   }
 
   showModalImages(p);
+  showModalAudio(p);
 
-  modal_close.onclick = () => modal.classList.remove("show");
+  const stopAudio = () => {
+    const audio_elements = modal.getElementsByTagName('audio');
+    for (const audio_element of audio_elements) {
+      audio_element.pause();
+      audio_element.currentTime = 0;
+    };
+  }
+
+  modal_close.onclick = () => {
+    stopAudio();
+    modal.classList.remove("show");
+  };
+
   window.onclick = (event) => {
-    if (event.target == modal)
+    if (event.target == modal) {
+      stopAudio();
       modal.classList.remove("show");
+    }
   };
 
   modal.classList.add("show");
@@ -208,6 +228,38 @@ function showModalImages(p) {
   }
 }
 
+/**
+ * Show the audio on a modal.
+ * @param {{
+ * audio: String?[]
+ * }} p The parameters.
+ */
+function showModalAudio(p) {
+  const modal_audio = document.getElementById("modal-audio");
+
+  if (p.audio && p.audio.length > 0) {
+    let audio_html = '<div id="modal-audio-container">';
+
+    p.audio.forEach((audio_src) => {
+      audio_html += `
+        <div class="audio-item">
+          <audio controls>
+            <source src="${audio_src}" type="audio/wav">
+            <source src="${audio_src}" type="audio/mpeg">
+            <source src="${audio_src}" type="audio/ogg">
+            Your browser does not support the audio.
+          </audio>
+        </div>
+      `;
+    });
+
+    audio_html += '</div>';
+    modal_audio.innerHTML = audio_html;
+  } else {
+    modal_audio.innerHTML = '';
+  }
+}
+
 function createMarkers() {
   createMarker({
     title: "Test Marker",
@@ -219,6 +271,10 @@ function createMarkers() {
     images: [
       "./assets/squirrel.jpg",
       "./assets/620762.png",
+    ],
+    audio: [
+      "./assets/audio/big cliff.wav",
+      "./assets/audio/beach.wav",
     ],
     sources: [
       Sources.crows_path,
@@ -235,6 +291,9 @@ function createMarkers() {
     + ' placeat minus nesciunt obcaecati eum.',
     images: [
       "./assets/20250721_124306.jpg",
+    ],
+    audio: [
+      "./assets/audio/rocky lake thing.wav",
     ],
   });
 }

@@ -110,6 +110,19 @@ h1 {
   font-size: 12px;
 }
 
+#modal-audio-container {
+  margin-bottom: 15px;
+}
+
+.audio-item {
+  margin-bottom: 10px;
+}
+
+.audio-item audio {
+  width: 100%;
+  height: 40px;
+}
+
 #modal-sources {
   margin-top: 15px;
 }
