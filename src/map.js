@@ -54,34 +54,7 @@ async function initializeMap() {
     infoWindow.close();
   });
 
-  createMarker({
-    title: "Test Marker",
-    position: { lat: 44.454778, lng: -73.227556 },
-    description: 'This is a test decription. Lorem ipsum dolor sit amet'
-    + ' consectetur adipisicing elit. Rerum incidunt ex illo reiciendis cupiditate'
-    + ' consectetur, aliquid quis, delectus sed quasi ut neque natus aspernatur ab'
-    + ' placeat minus nesciunt obcaecati eum.',
-    images: [
-      "./assets/squirrel.jpg",
-      "./assets/620762.png",
-    ],
-    sources: [
-      Sources.crows_path,
-      Sources.test_source,
-    ]
-  });
-
-  createMarker({
-    title: "Rocky Shore",
-    position: { lat: 44.455694, lng: -73.227519 },
-    description: 'This is a test decription. Lorem ipsum dolor sit amet'
-    + ' consectetur adipisicing elit. Rerum incidunt ex illo reiciendis cupiditate'
-    + ' consectetur, aliquid quis, delectus sed quasi ut neque natus aspernatur ab'
-    + ' placeat minus nesciunt obcaecati eum.',
-    images: [
-      "./assets/20250721_124306.jpg",
-    ],
-  });
+  createMarkers();
 }
 
 /**
@@ -233,4 +206,35 @@ function showModalImages(p) {
   } else {
     modal_images.innerHTML = '';
   }
+}
+
+function createMarkers() {
+  createMarker({
+    title: "Test Marker",
+    position: { lat: 44.454778, lng: -73.227556 },
+    description: 'This is a test decription. Lorem ipsum dolor sit amet'
+    + ' consectetur adipisicing elit. Rerum incidunt ex illo reiciendis cupiditate'
+    + ' consectetur, aliquid quis, delectus sed quasi ut neque natus aspernatur ab'
+    + ' placeat minus nesciunt obcaecati eum.',
+    images: [
+      "./assets/squirrel.jpg",
+      "./assets/620762.png",
+    ],
+    sources: [
+      Sources.crows_path,
+      Sources.test_source,
+    ]
+  });
+
+  createMarker({
+    title: "Rocky Shore",
+    position: { lat: 44.455694, lng: -73.227519 },
+    description: 'This is a test decription. Lorem ipsum dolor sit amet'
+    + ' consectetur adipisicing elit. Rerum incidunt ex illo reiciendis cupiditate'
+    + ' consectetur, aliquid quis, delectus sed quasi ut neque natus aspernatur ab'
+    + ' placeat minus nesciunt obcaecati eum.',
+    images: [
+      "./assets/20250721_124306.jpg",
+    ],
+  });
 }
