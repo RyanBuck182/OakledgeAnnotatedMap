@@ -262,27 +262,6 @@ function showModalAudio(p) {
 
 function createMarkers() {
   createMarker({
-    title: "Test Marker",
-    position: { lat: 44.454778, lng: -73.227556 },
-    description: 'This is a test decription. Lorem ipsum dolor sit amet'
-    + ' consectetur adipisicing elit. Rerum incidunt ex illo reiciendis cupiditate'
-    + ' consectetur, aliquid quis, delectus sed quasi ut neque natus aspernatur ab'
-    + ' placeat minus nesciunt obcaecati eum.',
-    images: [
-      "./assets/squirrel.jpg",
-      "./assets/620762.png",
-    ],
-    audio: [
-      "./assets/audio/big cliff.wav",
-      "./assets/audio/beach.wav",
-    ],
-    sources: [
-      Sources.crows_path,
-      Sources.test_source,
-    ]
-  });
-
-  createMarker({
     title: "Rocky Shore",
     position: { lat: 44.455694, lng: -73.227519 },
     description: 'This is a test decription. Lorem ipsum dolor sit amet'
@@ -290,10 +269,58 @@ function createMarkers() {
     + ' consectetur, aliquid quis, delectus sed quasi ut neque natus aspernatur ab'
     + ' placeat minus nesciunt obcaecati eum.',
     images: [
-      "./assets/20250721_124306.jpg",
+      "./assets/images/20250721_124306.jpg",
     ],
     audio: [
       "./assets/audio/rocky lake thing.wav",
     ],
   });
+
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_124043.jpg"], position: { lat: 44.455882699722224, lng: -73.22613259972222}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_124137.jpg"], position: { lat: 44.455744199722226, lng: -73.22640649972223}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_124214.jpg"], position: { lat: 44.4556131, lng: -73.227011}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_124306.jpg"], position: { lat: 44.4556813, lng: -73.2273155}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_124318.jpg"], position: { lat: 44.4556813, lng: -73.2273155}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_124556.jpg"], position: { lat: 44.455386599722225, lng: -73.22827809972222}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_124703.jpg"], position: { lat: 44.45523539972223, lng: -73.22813779972222}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_124706.jpg"], position: { lat: 44.4551997, lng: -73.2281923}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_124730.jpg"], position: { lat: 44.4551997, lng: -73.2281923}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_124732.jpg"], position: { lat: 44.4549965, lng: -73.2283227}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_124835.jpg"], position: { lat: 44.4550192, lng: -73.2283824}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_125441.jpg"], position: { lat: 44.4527799, lng: -73.227997}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_125653.jpg"], position: { lat: 44.4531141, lng: -73.22793749972223}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_125851.jpg"], position: { lat: 44.4538705, lng: -73.22899429972223}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_130002.jpg"], position: { lat: 44.4540456, lng: -73.22951709972223}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_130016.jpg"], position: { lat: 44.4540456, lng: -73.22951709972223}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_130045.jpg"], position: { lat: 44.45403579972223, lng: -73.22966529972223}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_130053.jpg"], position: { lat: 44.45403579972223, lng: -73.22966529972223}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_130147.jpg"], position: { lat: 44.4543198, lng: -73.2296397}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_130149.jpg"], position: { lat: 44.4543198, lng: -73.2296397}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_130224.jpg"], position: { lat: 44.4541697, lng: -73.2295184}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_130301.jpg"], position: { lat: 44.45414159972223, lng: -73.22996969972222}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_130401.jpg"], position: { lat: 44.453944499722226, lng: -73.23013939972222}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_130947.jpg"], position: { lat: 44.452687099722226, lng: -73.2278692}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_131006.jpg"], position: { lat: 44.4526905, lng: -73.2279735}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_131012.jpg"], position: { lat: 44.4526558, lng: -73.22798729972223}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_131015.jpg"], position: { lat: 44.452652399722226, lng: -73.22798559972222}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_131137.jpg"], position: { lat: 44.45313289972223, lng: -73.2275778}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_131612.jpg"], position: { lat: 44.45429299972223, lng: -73.2283414}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_131618.jpg"], position: { lat: 44.4542805, lng: -73.22832809972222}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_131735.jpg"], position: { lat: 44.45405889972223, lng: -73.2286383}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_131929.jpg"], position: { lat: 44.4546178, lng: -73.2285748}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_132443.jpg"], position: { lat: 44.454917299722226, lng: -73.22808879972223}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_132800.jpg"], position: { lat: 44.45452159972223, lng: -73.228323}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_132812.jpg"], position: { lat: 44.454582199722225, lng: -73.22831109972222}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_132854.jpg"], position: { lat: 44.4548235, lng: -73.22831759972222}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_133443.jpg"], position: { lat: 44.4562594, lng: -73.2253386}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_133521.jpg"], position: { lat: 44.456430599722225, lng: -73.22491549972223}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_133557.jpg"], position: { lat: 44.4565324, lng: -73.22497359972222}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_133657.jpg"], position: { lat: 44.456779599722225, lng: -73.2243871}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_133743.jpg"], position: { lat: 44.45718229972223, lng: -73.224288}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_133813.jpg"], position: { lat: 44.457271599722226, lng: -73.2243196}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_133816.jpg"], position: { lat: 44.457271499722225, lng: -73.22431949972223}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_134554.jpg"], position: { lat: 44.4576086, lng: -73.22371929972222}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_134606.jpg"], position: { lat: 44.457653, lng: -73.22358319972223}});
+  createMarker({title: "Placeholder Title", description: "Placeholder description blah blah.", images: ["./assets/images/20250721_134625.jpg"], position: { lat: 44.45777819972223, lng: -73.2233848}});
+
 }
