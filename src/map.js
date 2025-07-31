@@ -3,7 +3,23 @@ let map;
 let infoWindow;
 
 /**
- * 
+ * @typedef {object} Source
+ * @property {string} name - The name of the source, to be displayed.
+ * @property {string} link - The link to the source.
+ */
+const Sources = {
+  crows_path: {
+    name: "Crow's Path Oakledge Park",
+    link: "https://docs.google.com/document/d/1wXfguzkHqh9jgZSvlM8or0_5bMe_JJPuLTQekxQvPpU/edit?usp=sharing",
+  },
+  test_source: {
+    name: "Test Source",
+    link: "https://google.com",
+  },
+};
+
+/**
+ * Marker categories
  * @readonly
  * @enum {Object}
  */
@@ -48,6 +64,10 @@ async function initializeMap() {
       "./assets/squirrel.jpg",
       "./assets/620762.png",
     ],
+    sources: [
+      Sources.crows_path,
+      Sources.test_source,
+    ]
   });
 
   createMarker({
@@ -72,6 +92,7 @@ async function initializeMap() {
  * description: String,
  * images: String?[],
  * category: Category?,
+ * sources: Source?[],
  * }} p The parameters.
  * @returns {AdvancedMarkerElement} The marker element.
  */
@@ -96,7 +117,8 @@ function createMarker(p) {
  * @param {{
  * title: String,
  * description: String,
- * images: String?[]
+ * images: String?[],
+ * sources: Source?[],
  * }} p The parameters.
  */
 function createInfoWindow(marker, p) {
@@ -127,6 +149,7 @@ function createInfoWindow(marker, p) {
  * title: String,
  * description: String,
  * images: String?[]
+ * sources: Source?[],
  * }} p The parameters.
  */
 function showMarkerModal(p) {
@@ -134,9 +157,18 @@ function showMarkerModal(p) {
   const modal_close = document.getElementById("modal-close");
   const modal_title = document.getElementById("modal-title");
   const modal_description = document.getElementById("modal-description");
+  const modal_sources = document.getElementById("modal-sources");
 
   modal_title.innerText = p.title;
   modal_description.innerText = p.description;
+
+  if (p.sources && p.sources.length > 0) {
+    let sources_html = "<h2>Sources:</h2>";
+    p.sources.forEach(source => {
+      sources_html += `<a class="source" href="${source.link}">${source.name}</a>`
+    });
+    modal_sources.innerHTML = sources_html;
+  }
 
   showModalImages(p);
 
