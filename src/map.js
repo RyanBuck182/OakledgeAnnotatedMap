@@ -43,7 +43,8 @@ async function initializeMap() {
   map = new GoogleMap(document.getElementById('map'), {
     center: { lat: 44.454778, lng: -73.227556 },
     zoom: 18,
-    mapId: "46571f95beb50f37f04802da"
+    mapId: "46571f95beb50f37f04802da",
+    mapTypeId: 'hybrid'
   });
 
   // Initialize the info window.
