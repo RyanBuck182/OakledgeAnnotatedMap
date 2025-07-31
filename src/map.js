@@ -1,5 +1,6 @@
 let GoogleMap, AdvancedMarkerElement, PinElement;
 let map;
+let infoWindow;
 
 async function initializeMap() {
   ({ Map: GoogleMap } = await google.maps.importLibrary("maps"));
@@ -10,6 +11,10 @@ async function initializeMap() {
     zoom: 18,
     mapId: "46571f95beb50f37f04802da"
   });
+
+  // Initialize the info window.
+  // Only one is ever created. It is reused for each marker.
+  infoWindow = new google.maps.InfoWindow({content: ""});
 
   createMarker({
     title: "Test Marker",
@@ -77,26 +82,24 @@ function createMarker(p) {
  * }} p The parameters.
  */
 function createInfoWindow(marker, p) {
-  const infoWindow = new google.maps.InfoWindow({
-    content: `
+  marker.addListener("click", () => {
+    infoWindow.setContent(`
       <div style="max-width: 300px;">
         <h2>${p.title}</h2>
         <p>${p.description}</p>
         <p id="see-more">See more...</p>
       </div>
-    `,
-  });
+    `);
 
-  marker.addListener("click", () => {
     infoWindow.open({
       anchor: marker,
       map: map,
     });
-  });
 
-  infoWindow.addListener('domready', () => {
-    const see_more = document.getElementById("see-more");
-    see_more.addEventListener('click', () => showMarkerModal(p));
+    infoWindow.addListener('domready', () => {
+      const see_more = document.getElementById("see-more");
+      see_more.addEventListener('click', () => showMarkerModal(p));
+    });
   });
 }
 
