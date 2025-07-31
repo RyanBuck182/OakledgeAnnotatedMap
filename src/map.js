@@ -82,7 +82,6 @@ async function initializeMap() {
       "./assets/20250721_124306.jpg",
     ],
   });
-  
 }
 
 /**
