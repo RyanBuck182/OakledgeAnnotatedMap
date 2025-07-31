@@ -2,6 +2,24 @@ let GoogleMap, AdvancedMarkerElement, PinElement;
 let map;
 let infoWindow;
 
+/**
+ * 
+ * @readonly
+ * @enum {Object}
+ */
+const Category = {
+  Chimney: {
+    background: "#b103fcff",
+    borderColor: "#6e00cfff",
+    glyphColor: "#6e00cfff"
+  },
+  Default: {
+    background: "#0390fc",
+    borderColor: "#0000cf",
+    glyphColor: "#0000cf"
+  },
+};
+
 async function initializeMap() {
   ({ Map: GoogleMap } = await google.maps.importLibrary("maps"));
   ({ AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker"));
@@ -50,15 +68,12 @@ async function initializeMap() {
  * position: { lat: Number, lng: Number },
  * description: String,
  * images: String?[],
+ * category: Category?,
  * }} p The parameters.
  * @returns {AdvancedMarkerElement} The marker element.
  */
 function createMarker(p) {
-  const pin = new PinElement({
-    background: "#0390fc",
-    borderColor: "#0000cf",
-    glyphColor: "#0000cf"
-  });
+  const pin = new PinElement(p.category ?? Category.Default);
 
   const marker = new AdvancedMarkerElement({
     map: map,
