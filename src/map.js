@@ -33,6 +33,9 @@ async function initializeMap() {
   // Initialize the info window.
   // Only one is ever created. It is reused for each marker.
   infoWindow = new google.maps.InfoWindow({content: ""});
+  map.addListener("click", () => {
+    infoWindow.close();
+  });
 
   createMarker({
     title: "Test Marker",
