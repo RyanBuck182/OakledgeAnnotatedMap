@@ -208,8 +208,12 @@ function showModalImages(p) {
       </div>
     `;
 
+    const modal_image = document.getElementById("modal-image");
+    modal_image.addEventListener("click", () => {
+      window.open(modal_image.src);
+    });
+
     if (img_count > 1) {
-      const modal_image = document.getElementById("modal-image");
       const prev_btn = document.getElementById("modal-image-prev-btn");
       const next_btn = document.getElementById("modal-image-next-btn");
       const img_counter = document.getElementById("modal-image-counter");
