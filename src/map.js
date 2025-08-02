@@ -307,7 +307,7 @@ function createMarkers() {
     category: Category.Water,
   });
 
-  // rocky shore
+  // Rocky Shore
   createMarker({
     title: "Rocky Shore",
     position: { lat: 44.455771, lng: -73.227568 },
@@ -323,7 +323,7 @@ function createMarkers() {
     category: Category.Water,
   });
 
-  //climbing cliff
+  // Climbing Cliff
   createMarker({
     title: "Climbing Ridge",
     description: "Placeholder description blah blah.",
@@ -332,7 +332,7 @@ function createMarkers() {
     category: Category.Nature,
   });
 
-  // oakledge cove
+  // Oakledge Cove
   createMarker({
     title: "Oakledge Cove",
     description: "Placeholder description blah blah.",
@@ -345,7 +345,7 @@ function createMarkers() {
     category: Category.Water,
   });
 
-  // second cove
+  // Second Cove
   createMarker({
     title: "Second Cove",
     description: "Placeholder description blah blah.",
@@ -354,7 +354,7 @@ function createMarkers() {
     category: Category.Water,
   });
 
-  // really old tree
+  // White Oak Tree
   createMarker({
     title: "White Oak Tree",
     description: "Placeholder description blah blah.",
@@ -367,7 +367,7 @@ function createMarkers() {
   });
   //info https://www.burlingtonfreepress.com/story/life/2019/07/04/oldest-tree-vermont-white-oak-burlington-nature-conservancy/1509194001/
 
-  // chimney 1
+  // Chimney 1
   createMarker({
     title: "Chimney 1",
     description: "Placeholder description blah blah.",
@@ -378,7 +378,7 @@ function createMarkers() {
     position: { lat: 44.45403579972223, lng: -73.22966529972223 },
     category: Category.Chimney,
   });
-  //chimney 2
+  // Chimney 2
   createMarker({
     title: "Chimney 2", description:
     "Placeholder description blah blah.",
@@ -386,7 +386,7 @@ function createMarkers() {
     position: { lat: 44.45405889972223, lng: -73.2286383 },
     category: Category.Chimney,
   });
-  //chimney 3
+  // Chimney 3
   createMarker({
     title: "Chimney 3",
     description: "Placeholder description blah blah.",
@@ -394,7 +394,7 @@ function createMarkers() {
     position: { lat: 44.4546178, lng: -73.2285748 },
     category: Category.Chimney,
   });
-  //chimney 4
+  // Chimney 4
   createMarker({
     title: "Chimney 4",
     description: "Placeholder description blah blah.",
@@ -405,7 +405,7 @@ function createMarkers() {
     position: { lat: 44.45452159972223, lng: -73.228323 },
     category: Category.Chimney,
   });
-  // chimney 5
+  // Chimney 5
   createMarker({
     title: "Chimney 5",
     description: "Placeholder description blah blah.",
@@ -413,7 +413,7 @@ function createMarkers() {
     position: { lat: 44.4548235, lng: -73.22831759972222 },
     category: Category.Chimney,
   });  
-  // chimney 6?
+  // Chimney 6?
   //wasn't able to find it on foot, but I saw it on google maps and figured it was likely to be the last chimney
   createMarker({
     title: "Chimney 6",
@@ -432,7 +432,7 @@ function createMarkers() {
   });
   // explain that i have no idea what it is but might have to do with oakledge manor
 
-  // oakledge manor informational sign
+  // Oakledge Manor Sign
   createMarker({
     title: "Oakledge Manor Sign",
     description: "Placeholder description blah blah.",
@@ -441,7 +441,7 @@ function createMarkers() {
     category: Category.Misc,
   });
     
-  //treehouse
+  // Treehouse
   createMarker({
     title: "Treehouse",
     description: "Placeholder description blah blah.",
@@ -457,7 +457,7 @@ function createMarkers() {
   });
   //accessible
 
-  // pavilion
+  // Pavilion
   createMarker({
     title: "Pavilion",
     description: "Placeholder description blah blah.",
@@ -466,7 +466,7 @@ function createMarkers() {
     category: Category.Misc,
   });
 
-  // playground
+  // Playground
   createMarker({
     title: "Playground",
     description: "Placeholder description blah blah.",
@@ -479,7 +479,7 @@ function createMarkers() {
     category: Category.Misc,
   });
 
-  // merge for blanchard beach
+  // Blanchard Beach
   createMarker({
     title: "Blanchard Beach",
     description: "Placeholder description blah blah.",
@@ -495,7 +495,7 @@ function createMarkers() {
     category: Category.Water,
   });
 
-  // green space, picnic bench
+  // Green Space
   createMarker({
     title: "Green Space",
     description: "Placeholder description blah blah.",
@@ -503,8 +503,9 @@ function createMarkers() {
     position: { lat: 44.456779599722225, lng: -73.2243871 },
     category: Category.Nature,
   });
+  // has picnic bench
   
-  // merge for earth clock
+  // Earth Clock
   createMarker({
     title: "Earth Clock",
     description: "Placeholder description blah blah.",
