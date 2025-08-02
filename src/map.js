@@ -276,36 +276,7 @@ function showModalAudio(p) {
 }
 
 function createMarkers() {
-  // rocky shore
-  createMarker({
-    title: "Rocky Shore",
-    position: { lat: 44.455771, lng: -73.227568 },
-    description: 'This is a test decription. Lorem ipsum dolor sit amet'
-    + ' consectetur adipisicing elit. Rerum incidunt ex illo reiciendis cupiditate'
-    + ' consectetur, aliquid quis, delectus sed quasi ut neque natus aspernatur ab'
-    + ' placeat minus nesciunt obcaecati eum.',
-    images: [
-      "./assets/images/20250721_124306.jpg",
-      "./assets/images/20250721_124318.jpg",
-     ],
-    audio: [ "./assets/audio/rocky lake thing.wav" ],
-    category: Category.Water,
-  });
-
-  // playground
-  createMarker({
-    title: "Playground",
-    description: "Placeholder description blah blah.",
-    images: [
-      "./assets/images/20250721_124043.jpg",
-      "./assets/images/20250721_124137.jpg",
-      "./assets/images/20250721_124214.jpg",
-    ],
-    position: { lat: 44.455903, lng: -73.226554},
-    category: Category.Misc,
-  });
-
-  // Cliffs
+    // Cliffs
   createMarker({
     title: "Cliffs",
     description: "Placeholder description blah blah.",
@@ -334,6 +305,31 @@ function createMarkers() {
     audio: ["./assets/audio/big cliff.wav"],
     position: { lat: 44.455045, lng: -73.228457 },
     category: Category.Water,
+  });
+
+  // rocky shore
+  createMarker({
+    title: "Rocky Shore",
+    position: { lat: 44.455771, lng: -73.227568 },
+    description: 'This is a test decription. Lorem ipsum dolor sit amet'
+    + ' consectetur adipisicing elit. Rerum incidunt ex illo reiciendis cupiditate'
+    + ' consectetur, aliquid quis, delectus sed quasi ut neque natus aspernatur ab'
+    + ' placeat minus nesciunt obcaecati eum.',
+    images: [
+      "./assets/images/20250721_124306.jpg",
+      "./assets/images/20250721_124318.jpg",
+     ],
+    audio: [ "./assets/audio/rocky lake thing.wav" ],
+    category: Category.Water,
+  });
+
+  //climbing cliff
+  createMarker({
+    title: "Climbing Ridge",
+    description: "Placeholder description blah blah.",
+    images: ["./assets/images/20250721_131612.jpg"],
+    position: { lat: 44.45429299972223, lng: -73.2283414 },
+    category: Category.Nature,
   });
 
   // oakledge cove
@@ -371,24 +367,61 @@ function createMarkers() {
   });
   //info https://www.burlingtonfreepress.com/story/life/2019/07/04/oldest-tree-vermont-white-oak-burlington-nature-conservancy/1509194001/
 
-  // oakledge manor informational sign
+  // chimney 1
   createMarker({
-    title: "Oakledge Manor Sign",
+    title: "Chimney 1",
     description: "Placeholder description blah blah.",
-    images: ["./assets/images/20250721_125653.jpg"],
-    position: { lat: 44.4531141, lng: -73.22793749972223 },
-    category: Category.Misc,
+    images: [
+      "./assets/images/20250721_130045.jpg",
+      "./assets/images/20250721_130053.jpg"
+    ],
+    position: { lat: 44.45403579972223, lng: -73.22966529972223 },
+    category: Category.Chimney,
   });
-  
-  // pavilion
+  //chimney 2
   createMarker({
-    title: "Pavilion",
-    description: "Placeholder description blah blah.",
-    images: ["./assets/images/20250721_131137.jpg"],
-    position: { lat: 44.453455, lng: -73.227627 },
-    category: Category.Misc,
+    title: "Chimney 2", description:
+    "Placeholder description blah blah.",
+    images: ["./assets/images/20250721_131735.jpg"],
+    position: { lat: 44.45405889972223, lng: -73.2286383 },
+    category: Category.Chimney,
   });
-  
+  //chimney 3
+  createMarker({
+    title: "Chimney 3",
+    description: "Placeholder description blah blah.",
+    images: ["./assets/images/20250721_131929.jpg"],
+    position: { lat: 44.4546178, lng: -73.2285748 },
+    category: Category.Chimney,
+  });
+  //chimney 4
+  createMarker({
+    title: "Chimney 4",
+    description: "Placeholder description blah blah.",
+    images: [
+      "./assets/images/20250721_132812.jpg",
+      "./assets/images/20250721_132800.jpg",
+    ],
+    position: { lat: 44.45452159972223, lng: -73.228323 },
+    category: Category.Chimney,
+  });
+  // chimney 5
+  createMarker({
+    title: "Chimney 5",
+    description: "Placeholder description blah blah.",
+    images: ["./assets/images/20250721_132854.jpg"],
+    position: { lat: 44.4548235, lng: -73.22831759972222 },
+    category: Category.Chimney,
+  });  
+  // chimney 6?
+  //wasn't able to find it on foot, but I saw it on google maps and figured it was likely to be the last chimney
+  createMarker({
+    title: "Chimney 6",
+    description: "Placeholder description blah blah.",
+    position: { lat: 44.453976, lng: -73.228103 },
+    category: Category.Chimney,
+  });
+
   // weird concrete thing (maybe remove)
   createMarker({
     title: "Concrete Foundation",
@@ -399,15 +432,15 @@ function createMarkers() {
   });
   // explain that i have no idea what it is but might have to do with oakledge manor
 
-  // green space, picnic bench
+  // oakledge manor informational sign
   createMarker({
-    title: "Green Space",
+    title: "Oakledge Manor Sign",
     description: "Placeholder description blah blah.",
-    images: ["./assets/images/20250721_133657.jpg"],
-    position: { lat: 44.456779599722225, lng: -73.2243871 },
-    category: Category.Nature,
+    images: ["./assets/images/20250721_125653.jpg"],
+    position: { lat: 44.4531141, lng: -73.22793749972223 },
+    category: Category.Misc,
   });
-  
+    
   //treehouse
   createMarker({
     title: "Treehouse",
@@ -424,74 +457,27 @@ function createMarkers() {
   });
   //accessible
 
-  //climbing cliff
+  // pavilion
   createMarker({
-    title: "Climbing Ridge",
+    title: "Pavilion",
     description: "Placeholder description blah blah.",
-    images: ["./assets/images/20250721_131612.jpg"],
-    position: { lat: 44.45429299972223, lng: -73.2283414 },
-    category: Category.Nature,
+    images: ["./assets/images/20250721_131137.jpg"],
+    position: { lat: 44.453455, lng: -73.227627 },
+    category: Category.Misc,
   });
 
-  // chimney 1
+  // playground
   createMarker({
-    title: "Chimney 1",
+    title: "Playground",
     description: "Placeholder description blah blah.",
     images: [
-      "./assets/images/20250721_130045.jpg",
-      "./assets/images/20250721_130053.jpg"
+      "./assets/images/20250721_124043.jpg",
+      "./assets/images/20250721_124137.jpg",
+      "./assets/images/20250721_124214.jpg",
     ],
-    position: { lat: 44.45403579972223, lng: -73.22966529972223 },
-    category: Category.Chimney,
+    position: { lat: 44.455903, lng: -73.226554},
+    category: Category.Misc,
   });
-
-  //chimney 2
-  createMarker({
-    title: "Chimney 2", description:
-    "Placeholder description blah blah.",
-    images: ["./assets/images/20250721_131735.jpg"],
-    position: { lat: 44.45405889972223, lng: -73.2286383 },
-    category: Category.Chimney,
-  });
-
-  //chimney 3
-  createMarker({
-    title: "Chimney 3",
-    description: "Placeholder description blah blah.",
-    images: ["./assets/images/20250721_131929.jpg"],
-    position: { lat: 44.4546178, lng: -73.2285748 },
-    category: Category.Chimney,
-  });
-
-  //chimney 4
-  createMarker({
-    title: "Chimney 4",
-    description: "Placeholder description blah blah.",
-    images: [
-      "./assets/images/20250721_132812.jpg",
-      "./assets/images/20250721_132800.jpg",
-    ],
-    position: { lat: 44.45452159972223, lng: -73.228323 },
-    category: Category.Chimney,
-  });
-
-  // chimney 5
-  createMarker({
-    title: "Chimney 5",
-    description: "Placeholder description blah blah.",
-    images: ["./assets/images/20250721_132854.jpg"],
-    position: { lat: 44.4548235, lng: -73.22831759972222 },
-    category: Category.Chimney,
-  });  
-
-  // chimney 6?
-  //wasn't able to find it on foot, but I saw it on google maps and figured it was likely to be the last chimney
-  createMarker({
-    title: "Chimney 6",
-    description: "Placeholder description blah blah.",
-    position: { lat: 44.453976, lng: -73.228103 },
-    category: Category.Chimney,
-  });  
 
   // merge for blanchard beach
   createMarker({
@@ -507,6 +493,15 @@ function createMarkers() {
     audio: ["./assets/audio/beach.wav"],
     position: { lat: 44.457271599722226, lng: -73.2243196 },
     category: Category.Water,
+  });
+
+  // green space, picnic bench
+  createMarker({
+    title: "Green Space",
+    description: "Placeholder description blah blah.",
+    images: ["./assets/images/20250721_133657.jpg"],
+    position: { lat: 44.456779599722225, lng: -73.2243871 },
+    category: Category.Nature,
   });
   
   // merge for earth clock
