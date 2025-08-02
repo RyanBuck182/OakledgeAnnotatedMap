@@ -15,6 +15,14 @@ const Sources = {
   news_vid: {
     name: "This Place In History: Oakledge Park",
     link: "https://vermonthistory.org/oakledge-park",
+  },
+  preservation: {
+    name: "Preservation in Pink - The Lost Resort",
+    link: "https://preservationinpink.wordpress.com/2009/09/14/the-lost-resort/"
+  },
+  natalie: {
+    name: "Natalie's Spot - History of Oakledge Park",
+    link: "https://blog.uvm.edu/nataliespot/2020/12/07/history-of-oakledge-park/"
   }
 };
 
@@ -365,7 +373,7 @@ function createMarkers() {
     category: Category.Nature,
     sources: [
       {
-        name: "Bulrington Free Press - Oldest Trees In Vermont",
+        name: "Burlington Free Press - Oldest Trees In Vermont",
         link: "https://www.burlingtonfreepress.com/story/life/2019/07/04/oldest-tree-vermont-white-oak-burlington-nature-conservancy/1509194001/"
       }
     ]
@@ -386,6 +394,7 @@ function createMarkers() {
     sources: [
       Sources.crows_path,
       Sources.news_vid,
+      Sources.preservation
     ]
   });
   // Chimney 2
@@ -398,6 +407,8 @@ function createMarkers() {
     sources: [
       Sources.crows_path,
       Sources.news_vid,
+      Sources.preservation,
+      Sources.natalie,
     ]
   });
   // Chimney 3
@@ -410,6 +421,8 @@ function createMarkers() {
     sources: [
       Sources.crows_path,
       Sources.news_vid,
+      Sources.preservation,
+      Sources.natalie,
     ]
   });
   // Chimney 4
@@ -425,6 +438,8 @@ function createMarkers() {
     sources: [
       Sources.crows_path,
       Sources.news_vid,
+      Sources.preservation,
+      Sources.natalie,
     ]
   });
   // Chimney 5
@@ -437,21 +452,24 @@ function createMarkers() {
     sources: [
       Sources.crows_path,
       Sources.news_vid,
+      Sources.preservation,
+      Sources.natalie,
     ]
   });  
   // Chimney 6
   createMarker({
     title: "Chimney 6",
-    description: chimney_text + " \nI didn't spot this one on the ground, so I didn't manage to get a picture, but I decided to mark it after noticing it on the maps.",
+    description: chimney_text + " \n\nI didn't spot this one on the ground, so I didn't manage to get a picture, but I decided to mark it after noticing it on the maps.",
     position: { lat: 44.453976, lng: -73.228103 },
     category: Category.Chimney,
     sources: [
       Sources.crows_path,
       Sources.news_vid,
+      Sources.preservation,
+      Sources.natalie,
     ]
   });
 
-  // weird concrete thing (maybe remove)
   createMarker({
     title: "Concrete Foundation",
     description: "I unfortunately do not have much to say about this weird concrete foundation nestled in the woods. It most likely came from construction in relation to Oakledge Manor, but I was unable to find any information to back this up. Nevertheless, it will remain there and continue to puzzle park-goers for years to come.",
@@ -459,7 +477,6 @@ function createMarkers() {
     position: { lat: 44.454917299722226, lng: -73.22808879972223 },
     category: Category.Misc,
   });
-  // explain that i have no idea what it is but might have to do with oakledge manor
 
   // Oakledge Manor Sign
   createMarker({
@@ -499,7 +516,7 @@ function createMarkers() {
   // Pavilion
   createMarker({
     title: "Pavilion",
-    description: "Placeholder description blah blah.",
+    description: "The pavilion at Oakledge park provides more great green space for Burlington residents, as well as seating, shelter, and a grill. I have some fond memories of me and 19 of my peers crowding around a single grill trying to start a fire in the freezing cold using only materials from the damp, snow covered forest for my Erik Shonstrom class.",
     images: ["./assets/images/20250721_131137.jpg"],
     position: { lat: 44.453455, lng: -73.227627 },
     category: Category.Misc,
@@ -508,7 +525,7 @@ function createMarkers() {
   // Playground
   createMarker({
     title: "Playground",
-    description: "Placeholder description blah blah.",
+    description: "The Oakledge playground is a recent addition to Oakledge Park built by the non-profit Oakledge for All. Construction finished in 2023, providing a universally accessible playground for anyone to enjoy. The drive for its creation came after Julia Wayne discovered that disabled children had no access to any sort of accessible playground in the entire state of Vermont.",
     images: [
       "./assets/images/20250721_124043.jpg",
       "./assets/images/20250721_124137.jpg",
@@ -516,6 +533,12 @@ function createMarkers() {
     ],
     position: { lat: 44.455903, lng: -73.226554},
     category: Category.Misc,
+    sources: [
+      {
+        name: "Oakledge for All",
+        link: "https://oakledgeforall.org/about",
+      }
+    ]
   });
 
   // Blanchard Beach
