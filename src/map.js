@@ -485,8 +485,13 @@ function createMarkers() {
   });  
 
   // chimney 6?
-  // 44.453976, -73.228103
   //wasn't able to find it on foot, but I saw it on google maps and figured it was likely to be the last chimney
+  createMarker({
+    title: "Chimney 6",
+    description: "Placeholder description blah blah.",
+    position: { lat: 44.453976, lng: -73.228103 },
+    category: Category.Chimney,
+  });  
 
   // merge for blanchard beach
   createMarker({
