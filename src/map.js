@@ -305,7 +305,7 @@ function createMarkers() {
     category: Category.Misc,
   });
 
-  // cliffs overlooking lake champlain
+  // Cliffs
   createMarker({
     title: "Cliffs",
     description: "Placeholder description blah blah.",
@@ -327,14 +327,14 @@ function createMarkers() {
     position: { lat: 44.455003, lng: -73.228373 },
     category: Category.Water,
   });
-  createMarker({
+  createMarker({ // The one I jumped off
     title: "Cliffs",
     description: "Placeholder description blah blah.",
     images: ["./assets/images/20250721_124835.jpg"],
     audio: ["./assets/audio/big cliff.wav"],
     position: { lat: 44.455045, lng: -73.228457 },
     category: Category.Water,
-  }); //mention how i jumped off cliff here
+  });
 
   // oakledge cove
   createMarker({
